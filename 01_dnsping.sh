@@ -38,7 +38,7 @@ dnsping_host() {
         }
         END         {print pl ":" rtt}
         '|cut -d"=" -f2)
-    RETURN_VALUE=$temp
+    RETURN_VALUE="$temp"
 }
 
 # dnsping some hosts for some dns resolvers:
@@ -53,7 +53,7 @@ dnsping_host() {
 # "Die DNS-Server vom CCC (213.73.91.35) und Digitalcourage e.V. (85.214.20.141) empfehle ich nicht, da diese Server kein DNSSEC zur Validierung nutzen."
 # Der CCC listet "seinen" eigenen/o.g. DNS-Server selber nicht mehr auf seiner Seite: https://www.ccc.de/censorship/dns-howto/ -- Offline/Down/ABN?!
 # 46.182.19.48 (Digitalcourage)
-# 194.150.168.168 (AS250.net) -- doesn't work at hetznerc/cloud/non-enduser-provider
+# 194.150.168.168 (AS250.net)  -- doesn't work at hetznerc/cloud/non-enduser-provider
 # --
 # 5.1.66.255 Freifunk München zensurfrei, DNSSEC
 # 185.150.99.255 Freifunk München zensurfrei, DNSSEC
